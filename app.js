@@ -87,4 +87,113 @@ const fireflyVehicles = [
       }
     }
   ];
+const blueOriginVehicles = [
+    {
+      title: "New Glenn",
+      description: "A reusable rocket by Blue Origin designed for a wide range of missions, including carrying crew and cargo to orbit and beyond. It features a powerful first stage with seven BE-4 engines and a versatile second stage for efficient space operations.",
+      firstStage: {
+        height: "57.5 meters",
+        propulsion: "7 BE-4 engines",
+        thrust: "550,000 lbf each",
+        reusability: "Designed for a minimum of 25 flights"
+      },
+      secondStage: {
+        height: "23.4 meters",
+        propulsion: "2 BE-3U engines",
+        thrust: "160,000 lbf each"
+      },
+      payloadFairing: {
+        diameter: "7 meters",
+        volume: "Twice the payload volume of any five-meter class commercial launch system"
+      },
+      performance: {
+        toLEO: "Over 45 metric tons",
+        toGTO: "Over 13 metric tons"
+      }
+    },
+    {
+      title: "New Shepard",
+      description: "A reusable suborbital rocket system designed for space tourism, capable of taking astronauts and research payloads past the Kármán line. It features a crew capsule with large windows for expansive space views.",
+      rocketHeight: "18 meters",
+      approximateAltitude: "307,000 feet",
+      spacecraftCapacity: "Up to six passengers",
+      spacecraftVolume: "530 cubic feet",
+      notableFeatures: {
+        crewCapsule: "Largest windows ever flown in space",
+        engine: "BE-3, throttleable for controlled landing"
+      },
+      environmentalMeasures: {
+        sustainability: "99% reusable dry mass",
+        propulsionByproduct: "Water vapor"
+      }
+    }
+  ];
+const rocketLabVehicles = [
+    {
+      title: "Electron",
+      description: "A lightweight, reusable orbital-class rocket designed for the precise delivery of small satellites to orbit. Features the world's first 3D-printed, electric-pump-fed rocket engine, the Rutherford, and a unique Kick Stage for deploying payloads into multiple orbits.",
+      image: "link_to_electron_image",
+      additionalInfo: {
+        height: "18 m / 59 ft",
+        diameter: "1.2 m / 3.9 ft",
+        stages: "2 + Kick Stage",
+        wetMass: "13,000 kg / 28,660 lb",
+        payloadToLEO: "300 kg / 661 lb",
+        structure: "Carbon Composite",
+        propellant: "LOX / Kerosene",
+        firstStage: {
+          engines: "9 Sea-level Rutherford",
+          liftOffThrust: "190 kN (43,000 lbf)",
+          peakThrust: "224 kN (56,000 lbf)",
+          isp: "311 seconds"
+        },
+        secondStage: {
+          engine: "Single Vacuum Rutherford",
+          totalThrust: "25.8 kN (5,800 lbf)",
+          isp: "343 seconds"
+        },
+        kickStage: {
+          features: [
+            "Deployment of payloads at multiple planes/inclinations",
+            "Higher altitude deployment",
+            "Hosted payload support",
+            "Multiple trajectory changes",
+            "Sustained low altitude orbits",
+            "Deorbiting payloads to eliminate space debris"
+          ]
+        },
+        reusability: "Electron is the only reusable orbital-class small rocket."
+      }
+    },
+    {
+        title: "Neutron",
+        description: "Rocket Lab's Neutron is designed for a range of missions including mega constellation deployment, deep space exploration, and human spaceflight, featuring a reusable design and the new Archimedes Engine.",
+        additionalInfo: {
+          height: "43 m / 141 ft",
+          diameter: "7m",
+          fairingDiameter: "5m",
+          payloadToLEO: "13,000 kg",
+          liftOffMass: "480,000 kg",
+          propellant: "LOX / Methane",
+          firstStage: {
+            engines: "9 Archimedes",
+            liftOffThrust: "6,800 kN",
+            peakThrust: "7,300 kN"
+          },
+          secondStage: {
+            engine: "Single Vacuum Archimedes",
+            vacuumThrust: "890 kN"
+          }
+        }
+      }      
+  ];
   
+
+const wrapper = document.querySelector(".sliderWrapper")
+const menuItems = document.querySelectorAll(".menuItem")
+
+menuItems.forEach((item, index) =>{
+    item.addEventListener("click", ()=>{
+        wrapper.style.transform = `tranlateX(${-100 * index}vw)`
+    })
+})
