@@ -47,12 +47,14 @@ nav{
 /* SLIDER */
 .slider{
     background: #111;
-    min-height: calc(100vh - 140px);
+    min-height: calc(100vh - 120px);
     clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 85%);
+    overflow: hidden;
 }
 .sliderWrapper{
     display: flex;
     width: 500vw;
+    transition: all 1s ease-in-out;
 }
 .sliderItem{
     width: 100vw;
@@ -78,6 +80,15 @@ nav{
     right: 10%;
     z-index: 1;
 }
+.sliderDesc{
+    position: absolute;
+    color: white;
+    top: 20%;
+    right: 10%;
+    z-index: 1;
+    width: 300px;
+    font-weight: 100;
+}
 .sliderPrice{
     position: absolute;
     color: white;
@@ -89,7 +100,7 @@ nav{
 .sliderButton{
     z-index: 1;
     position: absolute;
-    top: 50%;
+    top: 60%;
     right: 10%;
     cursor: pointer;
     color: white;
@@ -101,16 +112,4 @@ nav{
 .sliderButton:hover{
     background-color: white;
     color: black;
-}
-.sliderItem:nth-child(1) .sliderBg{
-    background-color: #369e62;
-}
-.sliderItem:nth-child(2) .sliderBg{
-    background-color: rebeccapurple;
-}
-.sliderItem:nth-child(3) .sliderBg{
-    background-color: cornflowerblue;
-}
-.sliderItem:nth-child(4) .sliderBg{
-    background-color: rgb(124,115,80);
 }

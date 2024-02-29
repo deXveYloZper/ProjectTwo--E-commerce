@@ -188,12 +188,46 @@ const rocketLabVehicles = [
       }      
   ];
   
+const allRockets = [spaceXVehicles,fireflyVehicles,blueOriginVehicles,rocketLabVehicles]
+// Creating a new array 'firstRockets' by mapping over 'allRockets', which contains arrays for each company. 
+// This extracts the first item (rocket) from each company's array to feature in the slider.
+const firstRockets = allRockets.map(companyVehicles => companyVehicles[0])
+
+function generateHeroSLider(rockets){
+    const sliderWrapper = document.getElementById("sliderWrapper")
+
+    rockets.forEach(rocket=>{
+        const sliderItem = document.createElement("div");
+        sliderItem.classList.add("sliderItem")
+
+        sliderItem.innerHTML =
+        `
+        <img src="${rocket.image}" alt="" class="sliderImg" width="600" height="600">
+        <div class="sliderBg"></div>
+        <h1 class="sliderTitle">${rocket.title}</h1>
+        <h2 class="sliderDesc">${rocket.description}</h2>
+        <h2 class="sliderPrice">${rocket.additionalInfo?.height}</h2>
+        <button class="sliderButton">BUY NOW</button>
+        `;
+        sliderWrapper.appendChild(sliderItem)
+    })
+}
+generateHeroSLider(firstRockets)
+
 
 const wrapper = document.querySelector(".sliderWrapper")
 const menuItems = document.querySelectorAll(".menuItem")
 
 menuItems.forEach((item, index) =>{
     item.addEventListener("click", ()=>{
-        wrapper.style.transform = `tranlateX(${-100 * index}vw)`
+        wrapper.style.transform = `translateX(${-100 * index}vw)`;
+         // Find the current slider item based on index
+         const currentSliderItem = wrapper.children[index];
+         // Within that item, find the .sliderBg element
+         const innerCircle = currentSliderItem.querySelector(".sliderBg");
+        //changing the background colors based on the index
+        const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF"]
+        innerCircle.style.backgroundColor = colors[index % colors.length]
+
     })
 })
