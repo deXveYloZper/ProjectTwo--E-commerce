@@ -2,7 +2,7 @@ const spaceXVehicles = [
     {
       title: "Falcon 9",
       description: "A reliable, reusable rocket designed for the transport of payloads and humans to Earth orbit and beyond.",
-      image: "link_to_falcon_9_image",
+      // image: "https://www.spacex.com/static/images/falcon-9/desktop/WebsiteF9Fairings_Render_Desktop.jpg",
       additionalInfo: {
         height: "70 m / 229.6 ft",
         diameter: "3.7 m / 12 ft",
