@@ -121,7 +121,6 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 .infoSectionItem{
     display: flex;
@@ -141,4 +140,8 @@ nav{
     font-size: 24px;
     text-align: center;
     line-height: 20px;
+}
+/* single vehicle info */
+.vehicle{}
+.vehicleImg{
 }
