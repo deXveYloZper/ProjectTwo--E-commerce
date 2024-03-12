@@ -2,7 +2,7 @@ const spaceXVehicles = [
     {
       title: "Falcon 9",
       description: "A reliable, reusable rocket designed for the transport of payloads and humans to Earth orbit and beyond.",
-      // image: "https://www.spacex.com/static/images/falcon-9/desktop/WebsiteF9Fairings_Render_Desktop.jpg",
+      image: "images/F9Fairings_Render_Desktop-removebg-preview.png",
       additionalInfo: {
         height: "70 m / 229.6 ft",
         diameter: "3.7 m / 12 ft",
@@ -202,7 +202,7 @@ function generateHeroSLider(rockets){
 
         sliderItem.innerHTML =
         `
-        <img src="${rocket.image}" alt="" class="sliderImg" width="600" height="600">
+        <img src="${rocket.image}" alt="" class="sliderImg">
         <div class="sliderBg"></div>
         <h1 class="sliderTitle">${rocket.title}</h1>
         <h2 class="sliderDesc">${rocket.description}</h2>

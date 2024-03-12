@@ -64,15 +64,16 @@ nav{
     position: relative;
 }
 .sliderImg{
-    z-index: 1;
+    margin-top: 100px;
+    margin-right: 400px; 
 }
-.sliderBg{
+/* .sliderBg{
     position: absolute;
     width: 650px;
     height: 750px;
     border-radius: 50%;
     background-color: gray;
-}
+} */
 .sliderTitle{
     position: absolute;
     color: white;
